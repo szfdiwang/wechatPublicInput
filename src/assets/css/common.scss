@@ -1,0 +1,467 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 400px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 440px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 440px) and (max-width: 480px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 520px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 520px) and (max-width: 560px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 600px) {
+  html {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+html {
+  color: #000;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #C1C6C9;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #C1C6C9;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #C1C6C9;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #C1C6C9;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+
+/* HTML5 媒体文件跟 img 保持一致 */
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: normal 14px/24px "Helvetica Neue", Helvetica, STheiti, "Microsoft Yahei", "冬青黑体简体中文 w3", 宋体, Arial, Tahoma, sans-serif, serif;
+  word-wrap: break-word;
+  outline: none;
+}
+
+input,
+button,
+textarea,
+select,
+option,
+optiongroup {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+
+/* 去掉各Table cell 的边距并让其边重合 */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* IE bug fixed: th 不继承 text-align*/
+
+th {
+  text-align: inherit;
+}
+
+
+/* 去除默认边框 */
+
+fieldset,
+img {
+  border: 0;
+}
+
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+
+iframe {
+  display: block;
+}
+
+
+/* 去掉 firefox 下此元素的边框 */
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+
+/* 一致的 del 样式 */
+
+del {
+  text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+
+
+/* 去掉列表前的标识, li 会继承 */
+
+ol,
+ul {
+  list-style: none;
+}
+
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+
+caption,
+th {
+  text-align: left;
+}
+
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+
+/* 统一上标和下标 */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+a {
+  color: #333;
+}
+
+
+/* 让链接在 hover 状态下显示下划线 */
+
+a:hover {
+  text-decoration: none;
+  color: #c00;
+}
+
+
+/* 默认不显示下划线，保持页面简洁 */
+
+ins,
+a {
+  text-decoration: none;
+}
+
+
+/* 清理浮动 */
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+  /* for IE6 IE7 */
+}
+
+.lrpd20 {
+  padding: 0 .63rem;
+}
+
+.appBg {
+  height: 100%;
+  -webkit-overflow-scrolling : touch;
+  .bar_nav i img {
+    width: 1.25rem;
+    position: absolute;
+    left: .63rem;
+    top: .78rem;
+  }
+
+  .bar_nav p {
+    color: #333;
+  }
+
+  .jpBgImg {
+    padding-top: 2.75rem;
+  }
+
+  .jpBgImg img {
+    width: 100%;
+    float: left;
+  }
+
+  .jpContBtn {
+    padding: 0 1.88rem .88rem;
+    background: #fff;
+  }
+
+  .jpContBtn p {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #F6AB00;
+    text-align: center;
+    color: #fff;
+    font-size: .94rem;
+  }
+
+  // .code_box {
+  //   z-index: 9999;
+  //   background-color: #ffffff;
+  //   width: 19.84375rem;
+  //   height: 13.03125rem;
+  //   border-radius: 0.625rem;
+  //   margin: 0 auto;
+  //   overflow: hidden;
+  //   text-align: center;
+  //   // position: relative;
+  //   position: fixed;
+  //   top: 9.375rem;
+  //   left: 0;
+  //   right: 0;
+
+  //   .title_box {
+  //     margin: 1.3rem auto;
+
+  //     span {
+  //       width: 11.15625rem;
+  //       height: 1.0625rem;
+  //       font-size: 1.125rem;
+  //       font-weight: 500;
+  //       color: rgba(246, 171, 0, 1);
+  //       line-height: 1.125rem;
+  //     }
+  //   }
+
+  //   .line_box {
+  //     margin: 0 auto;
+  //     // border: 0.0625rem dashed rgba(236, 236, 236, 1);
+  //     width: 17.71875rem;
+  //     height: 1px;
+  //     background-image: linear-gradient(to right,
+  //       rgb(168, 168, 168) 0%,
+  //       rgba(168, 168, 168, 1) 50%,
+  //       transparent 50%);
+  //     background-size: 1.25rem 0.03125rem;
+  //     background-repeat: repeat-x;
+  //   }
+
+  //   .password_box {
+  //     width: 17.53125rem;
+  //     margin: 1.59375rem auto;
+
+  //     ul {
+  //       display: flex;
+
+  //       li {
+  //         // flex: 1;
+  //         margin: 0 auto;
+  //         // padding-left: 0.3125rem;
+  //         width: 2.5rem;
+  //         height: 2.5rem;
+  //         background: rgba(247, 244, 248, 1);
+  //         border: 1px solid rgba(51, 51, 51, 0.18);
+  //         border-radius: 6px;
+  //       }
+  //     }
+  //   }
+
+  //   .submit_box {
+  //     width: 19.84375rem;
+  //     height: 2.84375rem;
+  //     background: linear-gradient(248deg,
+  //       rgba(246, 122, 0, 1) 0%,
+  //       rgba(246, 171, 0, 1) 99%);
+  //     border-radius: 0 0 0.625rem 0.625rem;
+  //     position: absolute;
+  //     bottom: 0;
+
+  //     span {
+  //       width: 2.1875rem;
+  //       height: 1.0625rem;
+  //       font-size: 1.125rem;
+  //       font-weight: 500;
+  //       color: rgba(255, 255, 255, 1);
+  //       line-height: 2.8rem;
+  //     }
+  //   }
+  // }
+}
